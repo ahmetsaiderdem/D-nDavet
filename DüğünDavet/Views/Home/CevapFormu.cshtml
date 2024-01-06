@@ -12,6 +12,7 @@
 </head>
 <body>
     <form asp-action="CevapFormu" method="post">
+        <div asp-validation-summary="All"></div>
         <div>
             <label asp-for="Names">Adınız:</label>
             <input asp-for="Names" />

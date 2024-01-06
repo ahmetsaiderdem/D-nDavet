@@ -26,8 +26,15 @@ namespace DüğünDavet.Controllers
         [HttpPost]
         public ViewResult CevapFormu(Cevap cevap)
         {
-            Repository.CevapEkle(cevap);
-            return View("Tesekkurler",cevap);
+            if (ModelState.IsValid)
+            {
+                Repository.CevapEkle(cevap);
+                return View("Tesekkurler", cevap);
+            }
+            else
+            {
+                return View();
+            }
         }
         public ViewResult CevaplarıListele() 
         {
