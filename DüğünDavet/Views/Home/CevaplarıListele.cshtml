@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Cevap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Düğüne Katılanlar</title>
+</head>
+<body>
+    <h3>Düğüne Gelenler</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Email</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+    </table>
+    <tbody>
+        @foreach (DüğünDavet.Models.Cevap x in Model)
+        {
+            <tr>
+                <td>@x.Names</td>
+                <td>@x.LastName</td>
+                <td>@x.eMail</td>
+                <td>@x.Phone</td>   
+            </tr>
+        }
+    </tbody>
+
+</body>
+</html>

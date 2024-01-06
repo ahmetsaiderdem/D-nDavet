@@ -17,6 +17,23 @@ namespace DüğünDavet.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ViewResult CevapFormu()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ViewResult CevapFormu(Cevap cevap)
+        {
+            Repository.CevapEkle(cevap);
+            return View("Tesekkurler",cevap);
+        }
+        public ViewResult CevaplarıListele() 
+        {
+            return View(Repository.cevaplar.Where(x=> x.DuguneGelecekmi==true));
+
+        }
 
         public IActionResult Privacy()
         {

@@ -1,0 +1,31 @@
+﻿@model Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Teşekkürler</title>
+</head>
+<body>
+    <div>
+        <h1>Bilgilendirme için teşekkürler @Model.Names @Model.LastName</h1>
+        
+        @if (Model.DuguneGelecekmi==true)
+        {
+            @: Düğüne katılımınız için teşekkürler
+        }
+        else
+        {
+            @:Bende gelmicem
+        }
+
+    </div>
+
+    Düğüne katılanları görmek için lütfen <a asp-action="CevaplarıListele">buraya</a> tıklayınız
+
+</body>
+</html>

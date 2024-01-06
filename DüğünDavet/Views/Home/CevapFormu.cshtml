@@ -1,0 +1,49 @@
+﻿@model Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CevapFormu</title>
+</head>
+<body>
+    <form asp-action="CevapFormu" method="post">
+        <div>
+            <label asp-for="Names">Adınız:</label>
+            <input asp-for="Names" />
+          
+        </div>
+        <div>
+            <label asp-for="LastName">Soyadınız:</label>
+            <input asp-for="LastName" />
+            
+        </div>
+        <div>
+            <label asp-for="eMail"> e-Mail:</label>
+            <input asp-for="eMail" />
+            
+        </div>
+        <div>
+            <label asp-for="Phone">Telefon:</label>
+            <input asp-for="Phone" />
+            
+        </div>
+        <div>
+            <label>Düğüne gelecek misiniz?</label>
+            <select asp-for="DuguneGelecekmi">
+                <option value="">Lütfen bir seçim yapınız</option>
+                <option value="true">Evet</option>
+                <option value="false">Hayır</option>
+            </select>
+            <
+        </div>
+        <button type="submit">Cevabı Gönder</button>
+
+
+    </form>
+</body>
+</html>
